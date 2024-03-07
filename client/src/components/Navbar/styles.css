@@ -1,0 +1,55 @@
+.navbar-container {
+  min-height: 80px;
+  min-width: 100vw;
+  box-sizing: border-box;
+  background: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin: 25px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.nav-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-right: 10px;
+}
+
+.button {
+  font-size: 25px;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  height: 30px;
+  cursor: pointer;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  font-size: 25px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.logout {
+  color: var(--secondary-color);
+  cursor: pointer;
+  font-size: 30px;
+  height: 30px;
+}

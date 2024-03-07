@@ -1,0 +1,241 @@
+.profile-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 30px;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+.profile-container .detail-field {
+  display: grid;
+  grid-template-columns: 1fr 4fr 2fr;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.field-name {
+  font-size: 28px;
+}
+
+.profile-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: var(--action-color);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.edit-button {
+  cursor: pointer;
+}
+
+.save-button {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.email-field {
+  grid-column: span 2;
+}
+
+.field-content {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-states div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  padding: 10px;
+  background-color: var(--action-color);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 10px;
+  text-transform: capitalize;
+}
+
+.scroller {
+  background: var(--secondary-color);
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white,
+    white,
+    transparent
+  );
+  mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white,
+    white,
+    transparent
+  );
+}
+
+.scroller-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  gap: 3rem;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 1.5rem));
+  }
+}
+
+.themes-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.themes {
+  display: flex;
+  justify-content: left;
+  gap: 30px;
+  padding: 20px;
+}
+
+.theme {
+  width: 30px;
+  height: 30px;
+  background-color: green;
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+}
+
+.selected {
+  outline: 2px solid var(--primary-color);
+  border: none;
+  outline-offset: 2px;
+}
+
+.themes-container:before {
+  content: '';
+  display: block;
+  width: 100%;
+  border-bottom: 2px solid var(--action-color);
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.theme1 {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.theme2 {
+  background: rgb(86, 28, 36);
+  background: linear-gradient(
+    270deg,
+    rgba(86, 28, 36, 1) 0%,
+    rgba(232, 216, 196, 1) 100%
+  );
+}
+
+.theme3 {
+  background: rgb(244, 238, 224);
+  background: linear-gradient(
+    270deg,
+    rgba(244, 238, 224, 1) 0%,
+    rgba(57, 54, 70, 1) 100%
+  );
+}
+
+.theme4 {
+  background: rgb(0, 169, 255);
+  background: linear-gradient(
+    270deg,
+    rgba(0, 169, 255, 1) 0%,
+    rgba(205, 245, 253, 1) 100%
+  );
+}
+
+.delete-button {
+  color: red;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 30px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .field-name {
+    font-size: 16px;
+  }
+
+  .profile-container input {
+    padding: 3px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+  .buttons {
+    justify-content: space-between;
+  }
+  .save-button {
+    margin-left: 20px;
+  }
+
+  .profile-states div {
+    font-size: 8px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .scroller-inner {
+    gap: 5px;
+  }
+
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 2.5px));
+    }
+  }
+
+  .themes {
+    gap: 10px;
+    padding: 20px;
+    justify-content: space-around;
+  }
+
+  .theme {
+    width: 20px;
+    height: 20px;
+  }
+
+  .delete-button {
+    margin: 20px;
+    font-size: 15px;
+  }
+}
