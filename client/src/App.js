@@ -14,8 +14,6 @@ function App() {
   useEffect(() => {
     setUser(JSON.parse(localStorage.getItem('profile')))
   }, [authData])
-  console.log(user)
-  console.log(isLoading)
   return (
     <>
       <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
@@ -33,7 +31,7 @@ function App() {
           position="top-right"
           autoClose={2000}
           hideProgressBar={false}
-          newestOnTop={false}
+          newestOnTop={true}
           closeOnClick
           rtl={false}
           pauseOnFocusLoss={false}
