@@ -8,10 +8,13 @@ export const signin = (formData) => async (dispatch) => {
     const { data } = await api.signin(formData).catch((error) => {
       if (error.response && error.response.status === 400) {
         toast.error('Invalid Credentials')
+        dispatch({ type: END_LOADING })
       } else if (error.response && error.response.status === 404) {
         toast.error("User doesn't exist.")
+        dispatch({ type: END_LOADING })
       } else {
         toast('An error occurred. Please try again later.')
+        dispatch({ type: END_LOADING })
       }
     })
     dispatch({ type: AUTH, payload: data })
@@ -27,8 +30,10 @@ export const signup = (formData) => async (dispatch) => {
     const { data } = await api.signup(formData).catch((error) => {
       if (error.response && error.response.status === 404) {
         toast.error('Account already exists for this email')
+        dispatch({ type: END_LOADING })
       } else {
         toast('An error occurred. Please try again later.')
+        dispatch({ type: END_LOADING })
       }
     })
 
