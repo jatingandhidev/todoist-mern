@@ -1,6 +1,5 @@
 .item-container {
   position: relative;
-  min-height: 80px;
   margin-top: 10px;
   background-color: var(--secondary-color);
   color: var(--primary-color);
@@ -11,6 +10,7 @@
   cursor: grab;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   transition: 0.4s ease-in-out;
 }
 
