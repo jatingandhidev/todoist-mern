@@ -62,6 +62,7 @@ const Profile = ({ closeModal }) => {
           onChange={(e) => setName(e.target.value)}
           type="text"
           disabled={isNameDisable}
+          style={{ width: '100%' }}
         />
         <div className="field-name buttons">
           <FaEdit
@@ -106,6 +107,10 @@ const Profile = ({ closeModal }) => {
           </div>
         </div>
       </div>
+      {/* <div className="detail-field">
+        <div className="field-name">Notify(Email):</div>
+        <input className="notify-checkbox" type="checkbox" checked={false} />
+      </div> */}
       <div className="themes-container">
         <div className="field-name">Themes:</div>
         <div className="themes">

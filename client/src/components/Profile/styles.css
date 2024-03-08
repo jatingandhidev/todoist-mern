@@ -26,7 +26,6 @@
 }
 
 .profile-container input {
-  width: 100%;
   padding: 12px;
   margin-bottom: 16px;
   box-sizing: border-box;
@@ -58,6 +57,11 @@
   grid-column: span 2;
   display: flex;
   justify-content: center;
+}
+
+.notify-checkbox {
+  width: 30px;
+  height: 30px;
 }
 
 .profile-states div {
@@ -199,6 +203,11 @@
     margin-bottom: 8px;
     border-radius: 4px;
     font-size: 12px;
+  }
+
+  .notify-checkbox {
+    width: 20px;
+    height: 20px;
   }
   .buttons {
     justify-content: space-between;
