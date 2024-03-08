@@ -1,5 +1,5 @@
 .navbar-container {
-  min-height: 80px;
+  height: 80px;
   min-width: 100vw;
   box-sizing: border-box;
   background: var(--primary-color);
