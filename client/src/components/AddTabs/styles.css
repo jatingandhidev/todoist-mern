@@ -5,7 +5,9 @@
   left: 0;
   min-height: 50px;
   width: 100%;
+  z-index: 2;
 }
+
 .tabs {
   display: flex;
   min-height: 50px;
@@ -61,13 +63,13 @@
 }
 
 .tab-content {
-  position: absolute;
+  /* position: absolute;
   top: 50px;
   left: 50%;
   transform: translateX(-50%);
   min-width: 90%;
   min-height: 90%;
-  /* background-color: red; */
+   */
   display: flex;
   align-items: center;
   justify-content: center;

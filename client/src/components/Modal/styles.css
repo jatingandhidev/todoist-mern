@@ -14,7 +14,7 @@
 .modal-content {
   position: relative;
   width: 80vw;
-  height: 90vh;
+  height: 80vh;
   background: var(--secondary-color);
   padding: 15px;
   border: solid 1px var(--primary-color);
@@ -22,7 +22,7 @@
   overflow: auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   color: var(--primary-color);
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .close-button {
