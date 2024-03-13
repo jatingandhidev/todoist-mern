@@ -53,7 +53,7 @@ const ProfileTasksRow = ({ item }) => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="modal-on-top">
         {isItemModalOpen && (
           <Modal closeModal={closeModal}>
             <ItemDetails item={item} />

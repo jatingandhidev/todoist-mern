@@ -56,6 +56,10 @@
   cursor: pointer;
 }
 
+.modal-on-top {
+  z-index: 20;
+}
+
 @media screen and (max-width: 600px) {
   .task-row {
     grid-template-columns: repeat(4, minmax(75px, 1fr));
