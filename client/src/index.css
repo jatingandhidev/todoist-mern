@@ -14,7 +14,7 @@
 body {
   margin: 0;
   font-family: 'Kanit', sans-serif;
-  font-weight: 700;
+  /* font-weight: 700; */
   letter-spacing: 2px;
   font-style: normal;
 
@@ -71,3 +71,5 @@ body .Toastify__progress-bar--error {
 body .Toastify__toast--info {
   background-color: #2196f3;
 } */
+
+/* Other common styles */

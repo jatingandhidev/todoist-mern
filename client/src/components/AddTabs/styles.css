@@ -70,9 +70,9 @@
   min-width: 90%;
   min-height: 90%;
    */
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
 
 @media screen and (max-width: 600px) {

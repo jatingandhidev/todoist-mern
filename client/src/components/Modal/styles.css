@@ -6,23 +6,29 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   z-index: 5;
 }
 
 .modal-content {
+  margin: auto;
   position: relative;
-  width: 80vw;
-  height: 80vh;
+  width: 80%;
+  height: auto;
   background: var(--secondary-color);
   padding: 15px;
-  border: solid 1px var(--primary-color);
+  border: solid 1px var(--action-color);
+
   border-radius: 8px;
   overflow: auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   color: var(--primary-color);
   overflow-x: hidden;
+}
+
+.modal-content-children {
+  margin-top: 50px;
 }
 
 .close-button {

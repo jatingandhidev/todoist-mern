@@ -80,46 +80,54 @@ const ItemForm = ({ closeModal, item }) => {
       {isEdit && <div className="edit-modal-header">UPDATE</div>}
 
       <form className="addItemForm" onSubmit={handleSubmit}>
-        <label htmlFor="title">Title:</label>
-        <input
-          type="text"
-          id="title"
-          name="title"
-          value={formData.title}
-          onChange={handleChange}
-        />
-
-        <label htmlFor="description">Description:</label>
-        <textarea
-          id="description"
-          name="description"
-          value={formData.description}
-          onChange={handleChange}
-        ></textarea>
-
-        <label>End date (optional):</label>
-        <input
-          id="date"
-          type="date"
-          name="selectedDate"
-          value={formData.date ? formData.date : ''}
-          onChange={handleChange}
-        />
-
-        <label htmlFor="state">State:</label>
-
-        <select
-          id="state"
-          name="state"
-          value={formData.state}
-          onChange={handleChange}
-        >
-          {columns.map((column, index) => (
-            <option key={index} value={column}>
-              {column}
-            </option>
-          ))}
-        </select>
+        <div className="input-box">
+          <input
+            type="text"
+            id="title"
+            name="title"
+            value={formData.title}
+            onChange={handleChange}
+            placeholder="Title"
+            required
+          />
+          <span>Title</span>
+        </div>
+        <div className="input-box">
+          <textarea
+            id="description"
+            name="description"
+            value={formData.description}
+            onChange={handleChange}
+            placeholder="Description"
+            required
+          />
+          <span>Description</span>
+        </div>
+        <div className="date-box">
+          <input
+            id="date"
+            type="date"
+            name="selectedDate"
+            value={formData.date ? formData.date : ''}
+            onChange={handleChange}
+          />
+          <span>End date (optional)</span>
+        </div>
+        <div className="state-box">
+          <select
+            id="state"
+            name="state"
+            value={formData.state}
+            onChange={handleChange}
+          >
+            {columns.map((column, index) => (
+              <option key={index} value={column}>
+                {column}
+              </option>
+            ))}
+          </select>
+          <span>State</span>
+        </div>
 
         <button type="submit">{isEdit ? 'Update' : 'Submit'}</button>
       </form>

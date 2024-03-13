@@ -8,7 +8,7 @@ const Modal = ({ closeModal, children }) => {
         <button className="close-button" onClick={closeModal}>
           <FaXmark />
         </button>
-        {children}
+        <div className="modal-content-children">{children}</div>
       </div>
     </div>
   )

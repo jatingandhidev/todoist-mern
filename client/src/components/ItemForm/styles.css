@@ -12,36 +12,43 @@
 }
 
 .addItemForm {
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  transform: translateX(-50%);
   background-color: var(--secondary-color);
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  width: 90%;
+  gap: 1rem;
   padding: 10px;
   box-sizing: border-box;
   margin-top: 10px;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.addItemForm label {
-  margin-bottom: 5px;
-  color: var(--primary-color);
-  font-size: 15px;
+.addItemForm .input-box,
+.addItemForm .date-box,
+.addItemForm select,
+.addItemForm button {
+  flex: 1;
+}
+
+.input-box span,
+.textarea-box span {
+  visibility: hidden;
+}
+
+.input-box input:valid ~ span,
+.input-box input:focus ~ span,
+.input-box textarea:valid ~ span,
+.input-box textarea:focus ~ span {
+  visibility: visible;
 }
 
 .addItemForm input,
 .addItemForm textarea,
 .addItemForm select {
   width: 100%;
-  padding: 8px;
-  margin-bottom: 12px;
+  padding: 0.5rem;
   box-sizing: border-box;
   border: 1px solid #ccc;
-  border-radius: 6px;
   font-size: 15px;
   background-color: var(--action-color);
 }
@@ -54,13 +61,12 @@
 }
 
 .addItemForm textarea {
-  resize: vertical;
-  height: 350px;
+  resize: none;
+  height: 150px;
 }
 
 .addItemForm select {
   appearance: none;
-
   padding: 8px;
   background-color: var(--secondary-color);
   border: 1px solid #ccc;
@@ -103,28 +109,23 @@
   border: solid 2px var(--primary-color);
 }
 
-@media screen and (max-width: 600px) {
-  .addItemForm textarea {
-    resize: vertical;
-    height: 120px;
-  }
-  .addItemForm label {
-    margin-bottom: 5px;
-    font-size: 12px;
-  }
-  .addItemForm select {
-    padding: 8px;
-    font-size: 12px;
-  }
-  .addItemForm button {
-    padding: 8px;
-    font-size: 12px;
+@media (width>=1024px) {
+  .addItemForm {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
-  .addItemForm input,
-  .addItemForm textarea,
-  .addItemForm select {
-    padding: 8px;
-    font-size: 12px;
+  .addItemForm .input-box {
+    flex: 0 0 100%;
+  }
+  .addItemForm .date-box,
+  .addItemForm .state-box {
+    flex: 0 0 calc(50% - 0.5rem);
+    margin: auto;
+  }
+
+  .addItemForm button {
+    flex: 0 0 50%;
+    margin: auto;
   }
 }

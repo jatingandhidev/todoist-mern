@@ -8,10 +8,6 @@
 }
 
 .item-details {
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  transform: translateX(-50%);
   min-width: 90%;
   min-height: calc(90% - 50px);
   padding: 20px;

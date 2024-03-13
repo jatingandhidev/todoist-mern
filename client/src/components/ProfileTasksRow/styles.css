@@ -13,7 +13,6 @@
 .task-row:hover {
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  scale: 1.05;
   border-radius: 20px;
 }
 
@@ -55,18 +54,6 @@
 
 .task-delete {
   cursor: pointer;
-}
-
-.modal-scale-down {
-  position: fixed;
-  top: 50%;
-  left: -10%;
-  width: 120%;
-  scale: 0.9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 20;
 }
 
 @media screen and (max-width: 600px) {

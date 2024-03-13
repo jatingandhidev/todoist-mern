@@ -53,7 +53,7 @@ const ProfileTasksRow = ({ item }) => {
           </div>
         </div>
       </div>
-      <div className="modal-scale-down">
+      <div>
         {isItemModalOpen && (
           <Modal closeModal={closeModal}>
             <ItemDetails item={item} />
